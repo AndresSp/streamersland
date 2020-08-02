@@ -1,41 +1,30 @@
 import React from 'react';
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link
-  } from "react-router-dom";
-import { AppBar, Toolbar, Typography } from '@material-ui/core';
-import Home from '../pages/home/Home';
-import About from '../pages/about/About';
+import { AppBar, Toolbar, Typography, makeStyles, SvgIcon } from '@material-ui/core';
+import { ReactComponent as Logo } from './../../logo.svg';
 
-function Header() {
+const useStyles = makeStyles({
+  toolbar: {
+    padding: '0 30px',
+    '& a': {
+      margin: '0 5px'
+    }
+  },
+});
+
+const Header = (props) => {
+  const classes = useStyles();
   return (
-    <Router>
-      <div>
       <AppBar position="relative">
-        <Toolbar>
-          {/* <CameraIcon className={classes.icon} /> */}
+        <Toolbar className={classes.toolbar}>
+          <SvgIcon>
+            <Logo/>
+          </SvgIcon>
           <Typography variant="h6" color="inherit" noWrap>
-            Album layout
+            Streamland
           </Typography>
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
+          { props.children }
         </Toolbar>
       </AppBar>
-
-        {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
-        <Switch>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
-      </div>
-    </Router>
   );
 }
 

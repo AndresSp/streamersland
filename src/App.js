@@ -14,8 +14,7 @@ function App() {
   return (
       <Router>
       <Header>
-      <Button color="inherit" component={Link} to="/">Inicio</Button>
-      <Button color="inherit" component={Link} to="/nosotros">Nosotros</Button>
+      {/* <Button color="inherit" component={Link} to="/nosotros">Nosotros</Button> */}
       </Header>
         <Switch>
               <Route path="/nosotros">

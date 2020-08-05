@@ -1,5 +1,5 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core';
+import { makeStyles, Typography } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
     cardTest: {
@@ -18,6 +18,14 @@ const useStyles = makeStyles((theme) => ({
         '&:hover' : {
             outline: '4px solid white'
         }
+    },
+    anon: {
+        color: theme.palette.secondary.contrastText,
+        backgroundColor: '#67AB87',
+        height: '100%',
+        textShadow: `
+                    2px 2px ${theme.palette.secondary.light},
+                    4px 4px ${theme.palette.secondary.main}`
     }
     })
 )
@@ -25,11 +33,14 @@ const useStyles = makeStyles((theme) => ({
 export default function CharacterThumbnail(props) {
     const classes = useStyles();
     const {id, name} = props;
-    const imgSrc = `${process.env.PUBLIC_URL}/streamers/${id}.png`
+    const imgSrc = name ? `${process.env.PUBLIC_URL}/streamers/${id}.png` : undefined
 
     return (
         <div className={classes.cardTest}>
-            <img className={classes.thumbnail} src={imgSrc}></img>
+            { imgSrc ? 
+                <img className={classes.thumbnail} src={imgSrc}></img> :  
+                <Typography variant="h2" align="center" className={classes.anon}>?</Typography> 
+            }
         </div>
     )
 }

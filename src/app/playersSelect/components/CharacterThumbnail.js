@@ -22,12 +22,14 @@ const useStyles = makeStyles((theme) => ({
     })
 )
 
-export default function CharacterThumbnail() {
+export default function CharacterThumbnail(props) {
     const classes = useStyles();
-    
+    const {id, name} = props;
+    const imgSrc = `${process.env.PUBLIC_URL}/streamers/${id}.png`
+
     return (
         <div className={classes.cardTest}>
-            <img className={classes.thumbnail} src="https://static-cdn.jtvnw.net/jtv_user_pictures/c57423a9-2465-4455-becb-8cd9abc7dd1f-profile_image-300x300.png"></img>
+            <img className={classes.thumbnail} src={imgSrc}></img>
         </div>
     )
 }

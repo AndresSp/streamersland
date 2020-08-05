@@ -1,0 +1,36 @@
+{
+    "streamers": {
+        "196124269": {
+            "name": "AdalOkumura1",
+            "enable": true
+        },
+        "159169007": {
+            "name": "Cunibunny",
+            "enable": true
+        },
+        "174621142": {
+            "name": "yokolat3",
+            "enable": true
+        },
+        "227705719": {
+            "name": "Valkryon365",
+            "enable": true
+        },
+        "69689738": {
+            "name": "SingularV",
+            "enable": true
+        },
+        "87445986": {
+            "name": "Beto_Ache",
+            "enable": true
+        },
+        "41715698": {
+            "name": "tiorichi",
+            "enable": true
+        }, 
+        "58960740" : {
+            "name": "Kidd_Yuvy",
+            "enable": true
+        }
+    }
+}

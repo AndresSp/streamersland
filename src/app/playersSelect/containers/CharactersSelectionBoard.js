@@ -2,12 +2,13 @@ import React from 'react';
 import { Grid, makeStyles, Typography } from '@material-ui/core';
 import CharacterPreview from './../components/CharacterPreview'
 import CharacterThumbnail from '../components/CharacterThumbnail';
+import streamersConfig from '../../../assets/json/streamers.json'
 
 const useStyles = makeStyles((theme) => ({
     title: {
         color: theme.palette.secondary.contrastText,
         textShadow: `
-                    2px 2px ${theme.palette.secondary.light}
+                    2px 2px ${theme.palette.secondary.light},
                     4px 4px ${theme.palette.secondary.main}`
     },
     container: {
@@ -17,7 +18,11 @@ const useStyles = makeStyles((theme) => ({
     })
 )
 
-const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18];
+const config = streamersConfig.streamers
+const streamers = Object.keys(streamersConfig.streamers).map((streamer) => ({
+    id: streamer,
+    name: config[streamer].name
+}))
 
 export default function CharactersSelectionBoard() {
     const classes = useStyles();
@@ -34,9 +39,9 @@ export default function CharactersSelectionBoard() {
                     </Grid>
                     <Grid item>
                         <Grid container  className={classes.container} spacing={1} direction="row" justify="flex-start">
-                        {cards.map((card) => (
-                            <Grid item key={card}>
-                                <CharacterThumbnail/>
+                        {streamers.map((streamer) => (
+                            <Grid item key={streamer.id}>
+                                <CharacterThumbnail id={streamer.id} name={streamer.name}/>
                             </Grid>
                             ))}
                         </Grid>

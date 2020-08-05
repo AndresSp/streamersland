@@ -1,16 +1,22 @@
 import React from 'react';
 
 import {Button, Card, CardActions, CardContent, CardMedia, 
-  CssBaseline, Grid, Typography, makeStyles, Container, Link, SvgIcon, useTheme, useMediaQuery} from '@material-ui/core';
+  CssBaseline, Grid, Typography, makeStyles, Container, Link, SvgIcon, useTheme, useMediaQuery, withStyles} from '@material-ui/core';
 import { ReactComponent as StreamerslandLogo } from './../../../assets/svg/streamersland.svg';
 import mcwp from './../../../assets/jpg/mcwp.jpg';
+import mapleCursorSvg from './../../../assets/svg/maple_cursor.svg';
+import mapleCursorCur from './../../../assets/svg/maple_cursor.cur';
 import CharactersSelectionBoard from '../../playersSelect/containers/CharactersSelectionBoard';
+import { Link as ScrollLink, animateScroll } from 'react-scroll';
+import ReactAudioPlayer from 'react-audio-player';
+import menuTheme from './../../../assets/mp3/menu.mp3';
+import { auth } from './../../api/twitch';
 
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
       {'Copyright © '}
-      <Link color="inherit" href="https://material-ui.com/">
+      <Link color="inherit" href="/">
         AndresSp
       </Link>{' '}
       {new Date().getFullYear()}
@@ -19,7 +25,7 @@ function Copyright() {
   );
 }
 
-const useStyles = makeStyles((theme) => ({
+const styles = (theme) => ({
   brand: {
     width: '100%',
     height: 'auto',
@@ -42,6 +48,21 @@ const useStyles = makeStyles((theme) => ({
   main: {
     backgroundColor: theme.palette.secondary.dark
   },
+  section2 : {
+    cursor: `url(${mapleCursorSvg}), url(${mapleCursorCur}), auto;`
+  },
+  audioPlayer: {
+    position: '-webkit-sticky',
+    position: 'sticky',
+    top: 0,
+    zIndex: 999,
+    height: '20px',
+    width: '100%',
+    filter: 'opacity(0.5)',
+    '&:hover': {
+      filter: 'opacity(0.8)'
+    }
+  },
   mainContainer: {
     minHeight: '100vh',
     paddingTop: theme.spacing(8),
@@ -51,17 +72,37 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.background.paper,
     padding: theme.spacing(6),
   },
-}));
+});
 
-export default function Album() {
-  const classes = useStyles();
+export class Home extends React.Component {
 
-  return (
+  constructor(props) {
+    super(props)
+  }
+
+  componentDidMount() {
+    
+    if(window.pageYOffset < 200){
+      animateScroll.scrollTo(64, {
+        smooth: true,
+        duration: 1000,
+        smooth: 'easeInOutCubic'
+      })
+    }
+  }
+
+  componentWillUnmount() {
+  }
+
+
+  render() {
+    const { classes } = this.props;
+    return (
     <React.Fragment>
       <CssBaseline />
       <main className={classes.main}>
         {/* Hero unit */}
-        <div className={classes.heroContent}>
+        <section id="section1" className={classes.heroContent}>
           <Container maxWidth="sm">
               <SvgIcon className={classes.brand} viewBox="0 0 24 12">
                 <StreamerslandLogo/>
@@ -72,9 +113,16 @@ export default function Album() {
             <div className={classes.heroButtons}>
               <Grid container spacing={2} justify="center">
                 <Grid item>
-                  <Button variant="contained" color="primary">
-                    Conócelos
-                  </Button>
+                  <ScrollLink
+                  activeClass="active"
+                  to="section2"
+                  spy={true}
+                  smooth={true}
+                  duration= {500}>
+                    <Button variant="contained" color="primary">
+                      Conócelos
+                    </Button>
+                  </ScrollLink>
                 </Grid>
                 {/* <Grid item>
                   <Button variant="contained" color="secondary">
@@ -84,11 +132,14 @@ export default function Album() {
               </Grid>
             </div>
           </Container>
-        </div>
-        <Container className={classes.mainContainer}>
-          {/* End hero unit */}
-          <CharactersSelectionBoard/>
-        </Container>
+        </section>
+        <section id="section2" className={classes.section2}>
+        <ReactAudioPlayer id="audioPlayer" className={classes.audioPlayer} src={menuTheme} loop volume={0.15} controls />
+          <Container className={classes.mainContainer}>
+            {/* End hero unit */}
+            <CharactersSelectionBoard/>
+          </Container>
+        </section>
       </main>
       {/* Footer */}
       <footer className={classes.footer}>
@@ -101,6 +152,8 @@ export default function Album() {
         <Copyright />
       </footer>
       {/* End footer */}
-    </React.Fragment>
-  );
+    </React.Fragment>)
+  }
 }
+
+export default withStyles(styles, { withTheme: true })(Home);

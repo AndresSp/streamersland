@@ -1,8 +1,8 @@
 import { configureStore } from '@reduxjs/toolkit';
-import counterReducer from './examples/counter/counterSlice';
+import streamersSelectSlice from './streeamersSelect/streamersSelectSlice';
 
 export default configureStore({
   reducer: {
-    counter: counterReducer,
+    streamersSelect: streamersSelectSlice
   },
 });

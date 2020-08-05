@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { makeStyles, Typography } from '@material-ui/core';
+var randomColor = require('randomcolor'); 
 
 const useStyles = makeStyles((theme) => ({
     container: {
@@ -25,11 +26,11 @@ const useStyles = makeStyles((theme) => ({
     },
     playerTitle: {
         position: 'absolute',
-        color: 'rgba(227, 35, 30, 0.75)',
         left: '40px',
         top: 0,
-        zIndex: 5
-
+        zIndex: 5,
+        textShadow: '1px 2px 0px white',
+        color: 'rgba(227, 35, 30, 0.9)'
     },
     playerDescription: {
         position: 'absolute',
@@ -51,21 +52,21 @@ const useStyles = makeStyles((theme) => ({
 
 export default function CharacterThumbnail(props) {
     const classes = useStyles();
-    const {id, name} = props;
-    const imgSrc = name ? `${process.env.PUBLIC_URL}/streamers/${id}.png` : undefined
+    const {streamer, selected, select, deselect} = props;
+    const imgSrc = streamer.name ? `${process.env.PUBLIC_URL}/streamers/${streamer.id}.png` : undefined
 
     return (
         <div className={classes.container}>
-            <Typography variant="h5" className={classes.playerTitle}>1P</Typography>
+            {selected ?  <Typography variant="h5" className={classes.playerTitle}>{selected}S</Typography> : ''}
             { imgSrc ? 
-            <div className={classes.imgContainer}>
+            <div className={classes.imgContainer} onClick={() => selected ? deselect(streamer) : select(streamer)}>
                 <img className={classes.thumbnail} src={imgSrc}></img>
-                <div className={classes.playerDescription}>
-                    <Typography variant="subtitle1" align="center">{name}</Typography>
-                </div>
+                {selected ? <div className={classes.playerDescription}>
+                    <Typography variant="subtitle1" align="center">{streamer.name}</Typography>
+                </div>: ''}
             </div>
-                     :  
-                <Typography variant="h2" align="center" className={classes.anon}>?</Typography> 
+            :  
+            <Typography variant="h2" align="center" className={classes.anon}>?</Typography> 
             }
         </div>
     )

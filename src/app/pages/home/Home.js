@@ -6,7 +6,7 @@ import { ReactComponent as StreamerslandLogo } from './../../../assets/svg/strea
 import mcwp from './../../../assets/jpg/mcwp.jpg';
 import mapleCursorSvg from './../../../assets/svg/maple_cursor.svg';
 import mapleCursorCur from './../../../assets/svg/maple_cursor.cur';
-import CharactersSelectionBoard from '../../playersSelect/containers/CharactersSelectionBoard';
+import CharactersSelectionBoard from '../../streeamersSelect/containers/CharactersSelectionBoard';
 import { Link as ScrollLink, animateScroll } from 'react-scroll';
 import ReactAudioPlayer from 'react-audio-player';
 import menuTheme from './../../../assets/mp3/menu.mp3';
@@ -66,7 +66,8 @@ const styles = (theme) => ({
   mainContainer: {
     minHeight: '100vh',
     paddingTop: theme.spacing(8),
-    paddingBottom: theme.spacing(8)
+    paddingBottom: theme.spacing(8),
+    overflow: 'auto'
   },
   footer: {
     backgroundColor: theme.palette.background.paper,

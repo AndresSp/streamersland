@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/static/css/main.5ecd60fb.chunk.css",
+    "main.js": "/static/js/main.799bc43c.chunk.js",
+    "main.js.map": "/static/js/main.799bc43c.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.66a97362.js",
+    "runtime-main.js.map": "/static/js/runtime-main.66a97362.js.map",
+    "static/js/2.c9ef0887.chunk.js": "/static/js/2.c9ef0887.chunk.js",
+    "static/js/2.c9ef0887.chunk.js.map": "/static/js/2.c9ef0887.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.31ac6ed3bfa47d2673a625e2d4cab246.js": "/precache-manifest.31ac6ed3bfa47d2673a625e2d4cab246.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.5ecd60fb.chunk.css.map": "/static/css/main.5ecd60fb.chunk.css.map",
+    "static/js/2.c9ef0887.chunk.js.LICENSE.txt": "/static/js/2.c9ef0887.chunk.js.LICENSE.txt",
+    "static/media/cube.3ef5213e.svg": "/static/media/cube.3ef5213e.svg",
+    "static/media/maple_cursor.svg": "/static/media/maple_cursor.14939a30.svg",
+    "static/media/maple_cursor.cur": "/static/media/maple_cursor.a77f6751.cur",
+    "static/media/mcwp.jpg": "/static/media/mcwp.74dc8598.jpg",
+    "static/media/menu.mp3": "/static/media/menu.1764c648.mp3",
+    "static/media/smashTemplate.png": "/static/media/smashTemplate.27471733.png",
+    "static/media/streamersland.fe44f735.svg": "/static/media/streamersland.fe44f735.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.66a97362.js",
+    "static/js/2.c9ef0887.chunk.js",
+    "static/css/main.5ecd60fb.chunk.css",
+    "static/js/main.799bc43c.chunk.js"
+  ]
+}

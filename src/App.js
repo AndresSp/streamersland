@@ -3,10 +3,8 @@ import Header from './app/header/Header'
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
-import { Button } from '@material-ui/core';
 import Home from './app/pages/home/Home';
 import About from './app/pages/about/About';
 

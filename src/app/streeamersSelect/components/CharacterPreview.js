@@ -1,5 +1,5 @@
 import React from 'react';
-import { makeStyles, Typography, useTheme, useMediaQuery } from '@material-ui/core';
+import { makeStyles, Typography } from '@material-ui/core';
 import smashBg from './../../../assets/png/smashTemplate.png';
 
 const useStyles = makeStyles({
@@ -103,11 +103,11 @@ export default function CharacterPreview(props) {
         <div className={classes.preview}>
           {/* <div> */}
             {/* {streamer ? <img className={classes.bgPreview} src={`${process.env.PUBLIC_URL}/streamers/${streamer.id}.png`}></img>: ''} */}
-            {streamer ? <img className={classes.imgPreview} src={`${process.env.PUBLIC_URL}/streamers/${streamer.id}.png`}></img>: ''}
+            {streamer ? <img className={classes.imgPreview} src={`${process.env.PUBLIC_URL}/streamers/${streamer.id}.png`} alt=''></img>: ''}
             {streamer  ? <Typography variant="h3" align="center" className={classes.name}>{streamer.name}</Typography>: <Typography variant="h5" align="center" className={`${classes.notSelected} animate__animated animate__bounce animate__delay-2s animate__slow animate__infinite`}>Seleccione un streamer para continuar</Typography>}
-            {streamer  ? <img className={classes.smashTemplate} src={smashBg}></img> : ''}
+            {streamer  ? <img className={classes.smashTemplate} src={smashBg} alt=''></img> : ''}
             {streamer ? <Typography variant="h4" align="center" className={classes.description}>{streamer.description}</Typography>: ''}
-            {streamer ? <img className={classes.smashTemplateFlipped} src={smashBg}></img>: ''}
+            {streamer ? <img className={classes.smashTemplateFlipped} src={smashBg} alt=''></img>: ''}
           {/* </div> */}
         </div>
     )

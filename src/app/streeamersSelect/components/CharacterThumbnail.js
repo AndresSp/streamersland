@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { makeStyles, Typography } from '@material-ui/core';
-var randomColor = require('randomcolor'); 
 
 const useStyles = makeStyles((theme) => ({
     container: {
@@ -60,7 +59,7 @@ export default function CharacterThumbnail(props) {
             {selected ?  <Typography variant="h5" className={classes.playerTitle}>{selected}S</Typography> : ''}
             { imgSrc ? 
             <div className={classes.imgContainer} onClick={() => selected ? deselect(streamer) : select(streamer)}>
-                <img className={classes.thumbnail} src={imgSrc}></img>
+                <img className={classes.thumbnail} src={imgSrc} alt=''></img>
                 {selected ? <div className={classes.playerDescription}>
                     <Typography variant="subtitle1" align="center">{streamer.name}</Typography>
                 </div>: ''}

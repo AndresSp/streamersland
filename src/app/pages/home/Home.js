@@ -1,7 +1,7 @@
 import React from 'react';
 
-import {Button, Card, CardActions, CardContent, CardMedia, 
-  CssBaseline, Grid, Typography, makeStyles, Container, Link, SvgIcon, useTheme, useMediaQuery, withStyles} from '@material-ui/core';
+import {Button,
+  CssBaseline, Grid, Typography, Container, Link, SvgIcon, withStyles} from '@material-ui/core';
 import { ReactComponent as StreamerslandLogo } from './../../../assets/svg/streamersland.svg';
 import mcwp from './../../../assets/jpg/mcwp.jpg';
 import mapleCursorSvg from './../../../assets/svg/maple_cursor.svg';
@@ -10,7 +10,6 @@ import CharactersSelectionBoard from '../../streeamersSelect/containers/Characte
 import { Link as ScrollLink, animateScroll } from 'react-scroll';
 import ReactAudioPlayer from 'react-audio-player';
 import menuTheme from './../../../assets/mp3/menu.mp3';
-import { auth } from './../../api/twitch';
 
 function Copyright() {
   return (
@@ -52,7 +51,6 @@ const styles = (theme) => ({
     cursor: `url(${mapleCursorSvg}), url(${mapleCursorCur}), auto;`
   },
   audioPlayer: {
-    position: '-webkit-sticky',
     position: 'sticky',
     top: 0,
     zIndex: 999,
@@ -77,15 +75,11 @@ const styles = (theme) => ({
 
 export class Home extends React.Component {
 
-  constructor(props) {
-    super(props)
-  }
 
   componentDidMount() {
     
     if(window.pageYOffset < 200){
       animateScroll.scrollTo(64, {
-        smooth: true,
         duration: 1000,
         smooth: 'easeInOutCubic'
       })

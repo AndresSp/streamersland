@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, makeStyles, Typography, Button, useMediaQuery, useTheme } from '@material-ui/core';
+import { Grid, makeStyles, Typography, Button } from '@material-ui/core';
 import CharacterPreview from './../components/CharacterPreview'
 import CharacterThumbnail from '../components/CharacterThumbnail';
 import LaunchIcon from '@material-ui/icons/Launch';

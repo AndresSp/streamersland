@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/streamland/static/css/main.5ecd60fb.chunk.css",
-    "main.js": "/streamland/static/js/main.cc1b75f6.chunk.js",
-    "main.js.map": "/streamland/static/js/main.cc1b75f6.chunk.js.map",
-    "runtime-main.js": "/streamland/static/js/runtime-main.b6497d61.js",
-    "runtime-main.js.map": "/streamland/static/js/runtime-main.b6497d61.js.map",
-    "static/js/2.c9ef0887.chunk.js": "/streamland/static/js/2.c9ef0887.chunk.js",
-    "static/js/2.c9ef0887.chunk.js.map": "/streamland/static/js/2.c9ef0887.chunk.js.map",
-    "index.html": "/streamland/index.html",
-    "precache-manifest.55abd21d1e7dcc140e48bccff71aa53a.js": "/streamland/precache-manifest.55abd21d1e7dcc140e48bccff71aa53a.js",
-    "service-worker.js": "/streamland/service-worker.js",
-    "static/css/main.5ecd60fb.chunk.css.map": "/streamland/static/css/main.5ecd60fb.chunk.css.map",
-    "static/js/2.c9ef0887.chunk.js.LICENSE.txt": "/streamland/static/js/2.c9ef0887.chunk.js.LICENSE.txt",
-    "static/media/cube.3ef5213e.svg": "/streamland/static/media/cube.3ef5213e.svg",
-    "static/media/maple_cursor.svg": "/streamland/static/media/maple_cursor.14939a30.svg",
-    "static/media/maple_cursor.cur": "/streamland/static/media/maple_cursor.a77f6751.cur",
-    "static/media/mcwp.jpg": "/streamland/static/media/mcwp.74dc8598.jpg",
-    "static/media/menu.mp3": "/streamland/static/media/menu.1764c648.mp3",
-    "static/media/smashTemplate.png": "/streamland/static/media/smashTemplate.27471733.png",
-    "static/media/streamersland.fe44f735.svg": "/streamland/static/media/streamersland.fe44f735.svg"
+    "main.css": "/streamersland/static/css/main.5ecd60fb.chunk.css",
+    "main.js": "/streamersland/static/js/main.172b22f6.chunk.js",
+    "main.js.map": "/streamersland/static/js/main.172b22f6.chunk.js.map",
+    "runtime-main.js": "/streamersland/static/js/runtime-main.aacecd8e.js",
+    "runtime-main.js.map": "/streamersland/static/js/runtime-main.aacecd8e.js.map",
+    "static/js/2.c9ef0887.chunk.js": "/streamersland/static/js/2.c9ef0887.chunk.js",
+    "static/js/2.c9ef0887.chunk.js.map": "/streamersland/static/js/2.c9ef0887.chunk.js.map",
+    "index.html": "/streamersland/index.html",
+    "precache-manifest.f2a2a1a0a7313471bf881bdd3501eb84.js": "/streamersland/precache-manifest.f2a2a1a0a7313471bf881bdd3501eb84.js",
+    "service-worker.js": "/streamersland/service-worker.js",
+    "static/css/main.5ecd60fb.chunk.css.map": "/streamersland/static/css/main.5ecd60fb.chunk.css.map",
+    "static/js/2.c9ef0887.chunk.js.LICENSE.txt": "/streamersland/static/js/2.c9ef0887.chunk.js.LICENSE.txt",
+    "static/media/cube.3ef5213e.svg": "/streamersland/static/media/cube.3ef5213e.svg",
+    "static/media/maple_cursor.svg": "/streamersland/static/media/maple_cursor.14939a30.svg",
+    "static/media/maple_cursor.cur": "/streamersland/static/media/maple_cursor.a77f6751.cur",
+    "static/media/mcwp.jpg": "/streamersland/static/media/mcwp.74dc8598.jpg",
+    "static/media/menu.mp3": "/streamersland/static/media/menu.1764c648.mp3",
+    "static/media/smashTemplate.png": "/streamersland/static/media/smashTemplate.27471733.png",
+    "static/media/streamersland.fe44f735.svg": "/streamersland/static/media/streamersland.fe44f735.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.b6497d61.js",
+    "static/js/runtime-main.aacecd8e.js",
     "static/js/2.c9ef0887.chunk.js",
     "static/css/main.5ecd60fb.chunk.css",
-    "static/js/main.cc1b75f6.chunk.js"
+    "static/js/main.172b22f6.chunk.js"
   ]
 }

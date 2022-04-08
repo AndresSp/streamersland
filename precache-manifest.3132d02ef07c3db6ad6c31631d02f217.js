@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4fc8ea05c4a1d524840f21865951e198",
+    "revision": "02cee1fe9e4b4f17146822144be0baf2",
     "url": "/streamersland/index.html"
   },
   {
-    "revision": "69e973e543053d510ceb",
+    "revision": "dce815b40848a14f02be",
     "url": "/streamersland/static/css/main.5ecd60fb.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/streamersland/static/js/2.c9ef0887.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "69e973e543053d510ceb",
-    "url": "/streamersland/static/js/main.172b22f6.chunk.js"
+    "revision": "dce815b40848a14f02be",
+    "url": "/streamersland/static/js/main.64c86989.chunk.js"
   },
   {
     "revision": "7d1536840e5abf493739",

@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/streamersland/static/css/main.5ecd60fb.chunk.css",
-    "main.js": "/streamersland/static/js/main.172b22f6.chunk.js",
-    "main.js.map": "/streamersland/static/js/main.172b22f6.chunk.js.map",
+    "main.js": "/streamersland/static/js/main.64c86989.chunk.js",
+    "main.js.map": "/streamersland/static/js/main.64c86989.chunk.js.map",
     "runtime-main.js": "/streamersland/static/js/runtime-main.aacecd8e.js",
     "runtime-main.js.map": "/streamersland/static/js/runtime-main.aacecd8e.js.map",
     "static/js/2.c9ef0887.chunk.js": "/streamersland/static/js/2.c9ef0887.chunk.js",
     "static/js/2.c9ef0887.chunk.js.map": "/streamersland/static/js/2.c9ef0887.chunk.js.map",
     "index.html": "/streamersland/index.html",
-    "precache-manifest.f2a2a1a0a7313471bf881bdd3501eb84.js": "/streamersland/precache-manifest.f2a2a1a0a7313471bf881bdd3501eb84.js",
+    "precache-manifest.3132d02ef07c3db6ad6c31631d02f217.js": "/streamersland/precache-manifest.3132d02ef07c3db6ad6c31631d02f217.js",
     "service-worker.js": "/streamersland/service-worker.js",
     "static/css/main.5ecd60fb.chunk.css.map": "/streamersland/static/css/main.5ecd60fb.chunk.css.map",
     "static/js/2.c9ef0887.chunk.js.LICENSE.txt": "/streamersland/static/js/2.c9ef0887.chunk.js.LICENSE.txt",
@@ -24,6 +24,6 @@
     "static/js/runtime-main.aacecd8e.js",
     "static/js/2.c9ef0887.chunk.js",
     "static/css/main.5ecd60fb.chunk.css",
-    "static/js/main.172b22f6.chunk.js"
+    "static/js/main.64c86989.chunk.js"
   ]
 }
